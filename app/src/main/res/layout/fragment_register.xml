@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.dalhousie.rapid_crypto_app.viewmodels.registrationViewModels.RegisterUserViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragements.registration.RegistrationFragment"
+        android:background="@color/whiteBlue"
+        android:padding="15dp"
+        android:id="@+id/container">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_LoginNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:text="@string/login_now"
+                android:onClick="@{viewModel::onExistingUserClicked}"
+                android:textColor="#787878"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+                app:layout_constraintVertical_bias="0.685" />
+
+            <EditText
+                android:id="@+id/inputNewPassword"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                android:paddingEnd="8dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                app:addTextChangedListener="@{viewModel.passwordTextWatcher}"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/inputNewEmail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/inputNewEmail"
+                app:layout_constraintTop_toBottomOf="@+id/inputNewEmail" />
+
+            <EditText
+                android:id="@+id/confirmNewPassword"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                android:paddingEnd="8dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="@string/confirm_password"
+                app:addTextChangedListener="@{viewModel.confirmPasswordTextWatcher}"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@+id/inputNewPassword"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/inputNewPassword"
+                app:layout_constraintTop_toBottomOf="@+id/inputNewPassword" />
+
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_marginTop="48dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="App Logo"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rapid_crypto_logo" />
+
+            <TextView
+                android:id="@+id/text_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/sign_up"
+                android:textColor="#404040"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_logo" />
+
+            <EditText
+                android:id="@+id/inputNewEmail"
+                android:layout_width="354dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="32dp"
+                android:paddingEnd="8dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="@string/email"
+                app:addTextChangedListener="@{viewModel.emailTextWatcher}"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_login" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/ic_btn_bg"
+                android:onClick="@{viewModel::onRegisterClicked}"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/inputNewEmail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/inputNewEmail"
+                app:layout_constraintTop_toBottomOf="@+id/confirmNewPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>
+

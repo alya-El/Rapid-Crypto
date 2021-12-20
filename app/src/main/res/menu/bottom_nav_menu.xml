@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_currencies"
+        android:icon="@drawable/ic_bitcoin_24dp"
+        android:title="@string/title_currencies" />
+
+    <item
+        android:id="@+id/navigation_portfolio"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_portfolio" />
+
+    <item
+        android:id="@+id/navigation_watchlist"
+        android:icon="@drawable/ic_baseline_list_alt_24dp"
+        android:title="@string/title_watchlist" />
+
+    <item
+        android:id="@+id/navigation_transactions"
+        android:icon="@drawable/ic_baseline_receipt_long_24dp"
+        android:title="@string/title_transactions" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_baseline_settings_24dp"
+        android:title="@string/title_settings" />
+
+</menu>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "306303814487",
+    "project_id": "csci-5708",
+    "storage_bucket": "csci-5708.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306303814487:android:247af421ab4c9561900c12",
+        "android_client_info": {
+          "package_name": "com.dalhousie.rapid_crypto_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306303814487-n191j8vmg1qku34nq9a5gfupbr34vjrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0mjefNTGStWeDOeAUZgf9tq5fzwmoey4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306303814487-n191j8vmg1qku34nq9a5gfupbr34vjrg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

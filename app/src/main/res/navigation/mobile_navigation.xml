@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_currencies">
+
+    <fragment
+        android:id="@+id/navigation_currencies"
+        android:name="com.dalhousie.rapid_crypto_app.fragments.currencies.CurrenciesFragment"
+        android:label="@string/title_currencies"
+        tools:layout="@layout/fragment_currencies" >
+        <action
+            android:id="@+id/action_navigation_currencies_to_navigation_currency_detail"
+            app:destination="@id/navigation_currency_detail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_portfolio"
+        android:name="com.dalhousie.rapid_crypto_app.fragments.portfolio.PortfolioFragment"
+        android:label="@string/title_portfolio"
+        tools:layout="@layout/fragment_portfolio" />
+
+    <fragment
+        android:id="@+id/navigation_watchlist"
+        android:name="com.dalhousie.rapid_crypto_app.fragments.watchlist.WatchlistFragment"
+        android:label="@string/title_watchlist"
+        tools:layout="@layout/fragment_watchlist" />
+
+    <fragment
+        android:id="@+id/navigation_transactions"
+        android:name="com.dalhousie.rapid_crypto_app.fragments.transactions.TransactionsFragment"
+        android:label="@string/title_transactions"
+        tools:layout="@layout/fragment_transactions" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.dalhousie.rapid_crypto_app.fragments.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_currency_detail"
+        android:name="com.dalhousie.rapid_crypto_app.fragments.currencies.CurrencyDetailFragment"
+        android:label="@string/title_currency_detail"
+        tools:layout="@layout/fragment_currency_detail" >
+        <action
+            android:id="@+id/action_navigation_currency_detail_to_navigation_currencies"
+            app:destination="@id/navigation_currencies" />
+        <argument
+            android:name="currencyDetail"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.dalhousie.rapid_crypto_app.fragments.settings.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+</navigation>
