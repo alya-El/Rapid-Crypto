@@ -32,13 +32,11 @@ Implementation of coroutines was hard because of its asynchronous behaviour but 
 
 ## Authors
 
-* Alya El-Serafi (alya.el-serafi@dal.ca)
-* Kartik Gevariya (kartik.gevariya@dal.ca)
-* Kevin Shanks(kevin.shanks@dal.ca)
-* Liam Brown(liam.brown@dal.ca)
-* Rotesh Chhabra (rt553741@dal.ca) 
-
-GitLab Repository : https://git.cs.dal.ca/gevariya/rapid-crypto-app
+* Alya El-Serafi 
+* Kartik Gevariya 
+* Kevin Shanks
+* Liam Brown
+* Rotesh Chhabra
 
 ## Prerequisites
 
